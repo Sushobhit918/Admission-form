@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitkara Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f92a30;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: cover;
+        }
+        .jain{
+            font-family: Arial, sans-serif;
+            background-color: #d9f522;
+            
+        }
+        .form-container {
+            background-color: #fff;
+            background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-teacher-s-college-classroom-coaching-course-poster-background-picture-image_1034424.jpg");
+            background-size:cover;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 750px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #af070f;
+        }
+    </style>
+</head>
+<body>
+    <img src="data:image/png;base64,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">
+
+    <div class="jain">
+<marquee><b>⭐ Welcome to chitkara University ⭐</b></marquee>
+</div>
+<div class="form-container">
+    <div class="jain">
+        <marquee><b>⭐ Note:Please fill the form carefully and information should be correct ⭐</b></marquee>
+        </div>
+   <center><h2><b>Chitkara University Admission Form</b></h2></center>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="firstName"><b>First Name:</b></label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName"><b>Last Name:</b></label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="dob"><b>Date of Birth:</b></label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="gender"><b>Gender:</b></label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email"><b>Email:</b></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone"><b>Phone Number:</b></label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="address"><b>Address:</b></label>
+            <textarea id="address" name="address" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="highSchool"><b>High School:</b></label>
+            <input type="text" id="highSchool" name="highSchool" required>
+        </div>
+        <div class="form-group">
+            <label for="gpa"><b>Marks in 12th:</b></label>
+            <input type="text" id="gpa" name="gpa" required>
+        </div>
+        <div class="form-group">
+            <label for="Program"><b>Program:</b></label>
+            <select id="Program" name="Program" required>
+                <option value="">Select Program</option>
+                <option value="BE">BE</option>
+                <option value="BCA">BCA</option>
+                <option value="MBA">MBA</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="extracurricular"><b>Extracurricular Activities:</b></label>
+            <textarea id="extracurricular" name="extracurricular"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
